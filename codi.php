@@ -1,7 +1,6 @@
  <!DOCTYPE HTML>
 <html>
 <head>
-
 </head>
 <body>
 
@@ -30,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        $emailErr = "Invalid email format";
      }
    }
+
     
    if (empty($_POST["website"])) {
      $website = "";
@@ -46,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    } else {
      $comment = test_input($_POST["comment"]);
    }
+
 
    if (empty($_POST["gender"])) {
      $genderErr = "Gender is required";
@@ -85,7 +86,11 @@ function test_input($data) {
 </form>
 
 <?php
-
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
 echo $website;
 echo "<br>";
 echo $comment;
